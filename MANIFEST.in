@@ -1,0 +1,25 @@
+include LICENSE README.md NOTICE.md CONTRIBUTING.md SECURITY.md MIGRATION.md VERIFICATION.md RELEASING.md
+include cover_default.png requirements.txt
+include downloader_basement/README.md
+recursive-include tests *.py
+recursive-include scripts *.py
+recursive-include duku_assets *.png
+exclude .gitmodules .gitattributes
+prune build
+prune dist
+prune cache
+prune 抓包
+prune 读
+prune 读库v2
+prune 听
+global-exclude __pycache__ *.py[cod] .DS_Store .env config.json header.json *.epub *.mp3 *.mp4 *.apk *.har *.pcap *.pcapng
+prune .git
+prune .venv
+prune .duku
+prune metadata
+prune .codex
+prune .agents
+prune *《读库》总目
+prune *chrome-profile*
+global-exclude .env.* *.json *.sqlite* *.pem *.key *.p12 *.m4a *.m3u8 *.ts
+include .env.example

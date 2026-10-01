@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=77,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "duku-cli"
+version = "0.1.0"
+description = "读库下载与 EPUB 转换 CLI"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE", "NOTICE.md"]
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+]
+keywords = ["duku", "cli", "ebook", "epub", "download"]
+dependencies = [
+  "requests",
+  "html2text",
+  "Pillow",
+  "selenium",
+  "selenium-wire",
+  "blinker<1.8",
+  "setuptools<81",
+  "webdriver-manager",
+  "websocket-client",
+  "m3u8",
+  "pycryptodome",
+]
+
+[project.urls]
+Homepage = "https://github.com/QinGeneral/duku_cli"
+Repository = "https://github.com/QinGeneral/duku_cli"
+Issues = "https://github.com/QinGeneral/duku_cli/issues"
+
+[project.optional-dependencies]
+dev = ["build"]
+
+[project.scripts]
+duku = "duku_cli:main"
+
+[tool.setuptools]
+py-modules = [
+  "duku_cli",
+  "duku_config",
+  "duku_download",
+  "duku_download_v2",
+  "duku_http_client",
+  "duku_phone_login",
+  "duku_listen",
+  "filter_and_copy_md",
+  "md_to_epub",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["downloader_basement", "duku_assets"]
+
+[tool.setuptools.package-data]
+duku_assets = ["cover_default.png"]

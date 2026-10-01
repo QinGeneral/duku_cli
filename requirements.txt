@@ -1,0 +1,11 @@
+requests
+html2text
+Pillow
+selenium
+selenium-wire
+blinker<1.8
+setuptools<81
+webdriver-manager
+websocket-client
+m3u8
+pycryptodome
